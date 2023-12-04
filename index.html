@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zxx" class="uk-background-white dark:uk-background-gray-100 dark:uk-text-gray-20 uk-dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullSendDoge
+    </title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#741ff5">
+    
+    <!-- preload head styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href=" assets/fonts/brand-icons/brand-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href=" assets/fonts/unicons/Unicons.woff?lkolxg" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/css/uikit.min.css" as="style">
+
+    <!-- <link rel="preload" href=" assets/css/theme/main.min.css" as="style"> -->
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href=" assets/js/uikit.min.js" as="script">
+    <link rel="preload" href=" assets/js/uikit-components.js" as="script">
+    <link rel="preload" href=" assets/js/jquery.min.js" as="script">
+    <link rel="preload" href=" assets/js/swiper-bundle.min.js" as="script">
+    <link rel="preload" href=" assets/js/feather.min.js" as="script">
+    <link rel="preload" href=" assets/js/typed.min.js" as="script">
+    <link rel="preload" href=" assets/js/anime.min.js" as="script">
+    <link rel="preload" href=" assets/js/app.js" as="script">
+    <link rel="preload" href=" assets/js/data-attr-helper.js" as="script">
+    <link rel="preload" href=" assets/js/swiper-helper.js" as="script">
+    <link rel="preload" href=" assets/js/typed-helper.js" as="script">
+    <link rel="preload" href=" assets/js/anime-helper.js" as="script">
+
+    <link rel="icon" type="imageicon" href="assets/images/logo.PNG">
+
+    <!-- include styles -->
+    <script src=" assets/js/app-head.js"></script>
+    <link rel="stylesheet" href="assets/css/theme/main.min.css">
+
+    <!-- include scripts -->
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/uikit-components.js"></script>
+</head>
+
+<body class="uni-body">
+
+    <!-- Dark/Light toggle 
+        <div class="darkmode-trigger uk-position-bottom-right uk-position-small uk-position-fixed uk-box-shadow-large uk-radius-circle" data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+-->
+    <!-- Menu modal -->
+    <div id="uni_mobile_menu" class="uni-mobile-menu uk-offcanvas" data-uk-offcanvas="mode: push; overlay: true; flip: true; selPanel: .uk-offcanvas-bar-panel;">
+        <div class="uk-offcanvas-bar-panel uk-panel dark:uk-background-gray-100">
+            <div class="uni-mobile-menu-wrap uk-flex-column uk-flex-between" data-uk-height-viewport="offset-bottom: true;">
+                <div class="uni-mobile-menu-content">
+                    <header class="uk-card uk-card-2xsmall uk-flex-middle uk-flex-between">
+                        <div class="uk-flex-1">
+                            <button aria-label="Close Menu" class="uk-offcanvas-close uk-button uk-button-small uk-button-icon uk-button-default uk-button-outline uk-radius-circle" type="button">
+                                    <i class="uk-icon-small" data-feather="arrow-left"></i>
+                                </button>
+                        </div>
+                        <div>
+                            <h5 class="uk-h5 uk-text-uppercase uk-margin-remove"></h5>
+                        </div>
+                        <div class="uk-flex-1"></div>
+                    </header>
+                    <hr class="uk-margin-remove">
+                    <div class="uk-card uk-card-small">
+                        <div class="uk-panel">
+                            <ul class="uk-nav uk-nav-default">
+                                <li><a href="/Home">Home</a></li>
+                                <li><a href="#uni_about">About</a></li>
+                                <li><a href="#uni_tokenomics">Tokenomics</a></li>
+                                <li><a href="#uni_collection">Partners</a></li>
+                                <li><a href="#uni_roadmap">Roadmap</a></li>
+                                <li><a href="#uni_faq"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Wrapper start -->
+    <div class="wrap">
+
+        <!-- Header start -->
+        <header class="uni-header uk-position-top">
+            <div class="uni-header-navbar" data-uk-sticky="" data-anime="">
+                <div class="uk-container">
+                    <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+                        <div class="uk-navbar-top">
+                            <div class="uk-navbar-left">
+                                <a class='uk-logo uk-navbar-item uk-h4 uk-h3@m uk-margin-remove' href='/'> <img class="uk-visible dark:uk-hidden" width="100" src="" alt="FSD COI
+                                    N LOGO" loading="lazy"> <img class="uk-hidden dark:uk-visible" width="50px" height="100px" src="assets/images/logo.PNG" alt="FSD 
+                                    LOGO" loading="lazy"></a>
+                            </div>
+ 
+                            <div class="uk-navbar-right uk-flex-1 uk-flex-right">
+                                <ul class="uk-navbar-nav dark:uk-text-gray-10 uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80" data-uk-navbar-bound>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="#uni_about">About</a></li>
+                                    <li><a href="#uni_tokenomics">Tokenomics</a></li>
+                                    <li><a href="#uni_collection">Partners</a></li>
+                                    <li><a href="#uni_roadmap">Roadmap</a></li>
+                                    
+                                </ul>
+                                <div class="uk-navbar-item">
+                                    <ul class="uk-subnav uk-subnav-small uk-visible@m">
+                                        <li>
+                                            <a href="twitterlink"><i class="uk-icon uk-icon-medium unicon-logo-twitter"></i></a>
+                                        </li>
+
+                                    </ul>
+
+                                    <!-- header: call to actions -->
+                                    
+                                </div>
+
+                                <div class="uk-navbar-item uk-hidden@m">
+                                  
+                                        </a>
+                                    <a href="#uni_mobile_menu" data-uk-toggle>
+                                            <span class="uk-icon uk-icon-medium material-icons">menu</span>
+                                        </a>
+                                        <ul class="uk-subnav uk-subnav-small uk-visible@m">
+                                        <li>
+                                            <a href="twitterlink"><i class="uk-icon uk-icon-medium unicon-logo-twitter"></i></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Header end -->
+
+        <!-- Hero start -->
+        <div id="uni_hero" class="uni-hero uk-section uk-section-xlarge uk-padding-remove-bottom uk-panel">
+            <div class="uk-position-top uk-position-z-index-negative uk-overflow-hidden uk-blend-overlay" data-uk-height-viewport="">
+                <img class="uk-position-top-left uk-position-fixed uk-blur-large" style="left: -4%; top: -4%" width="500" src=" assets/images/gradient-circle.svg" alt="Circle">
+                <img class="uk-cover uk-opacity-0" data-uk-cover src="assets/images/GG.jpg" alt="arrow">
+                <img class="uk-position-bottom-right uk-position-fixed uk-blur-large" style="right: -4%; bottom: -4%" width="500" src=" assets/images/gradient-circle.svg" alt="Circle">
+            </div>
+            <div class="uk-position-top uk-position-z-index-negative" data-uk-height-viewport="">
+                <div class="uk-position-cover uk-background-cover uk-opacity-10 dark:uk-hidden" data-src=" assets/images/gradient-01.png" data-uk-img></div>
+                <div class="uk-position-cover uk-background-cover uk-opacity-20 uk-hidden dark:uk-visible" data-src=" assets/images/gradient-01.png" data-uk-img></div>
+            </div>
+            <div class="uk-panel uk-position-z-index">
+                <div class="uk-container">
+                    <div class="uk-panel">
+                        <div class="uk-grid uk-grid-2xlarge uk-flex-middle uk-flex-between" data-uk-grid data-uk-height-viewport="offset-top: true; offset-bottom: 20;">
+                            <div class="uk-width-5-12@m">
+                                <div class="uk-panel uk-position-z-index uk-text-center uk-text-left@m" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                                   <br><br>
+                                    <h2 class="uk-h2 uk-heading-d3@m uk-margin-small uk-margin@m">Introducing FSD. </h2>
+                                    <p class="uk-text-xlarge uk-width-xlarge@m uk-text-muted">FSD serves as a dynamic hub for innovation, fostering an environment where creative ideas can flourish!"
+                                        With contributors from around the world, FSD facilitates global collaboration, bringing together a diverse and inclusive community..</p>
+                                    <a href="buylink" class="uk-button uk-button-medium@m uk-button-gradient uk-margin-small-top"><hr>
+                                            <span>BUY </span>
+                                            <i class="uk-text-bold"></i>
+                                        </a>
+                                    
+                                    <a href="chartlink" class="uk-button uk-button-medium@m uk-button-gradient uk-margin-small-top">
+                                            <span>Chart</span>
+                                            <i class="uk-text-bold"></i>
+                                        </a>
+                                    
+                                        <a href="tglink" class="uk-button uk-button-medium@m uk-button-gradient uk-margin-small-top">
+                                            <span>Telegram</span>
+                                            <i class="uk-text-bold"></i>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="uk-width-6-12@m uk-flex-center">
+                                <div class="uk-panel" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 200;">
+                                 
+                                    <div class="uk-grid uk-grid-xsmall uk-child-width-1-2" data-uk-grid="masonry: true;">
+                                        <div>
+                                            <div class="uni-item uk-card uk-overflow-hidden uk-radius uk-radius-large@m uk-box-shadow-hover-medium uk-visible-toggle uk-transition-toggle uk-box-shadow-medium uk-background-white dark:uk-background-white-5">
+                                                <div class="uni-item-featured-image uk-panel uk-flex-middle uk-flex-center">
+                                                    <div class="uk-panel uk-image-middle">
+                                                        <img src="assets/images/logo.PNG" alt="Artwork" class="uk-radius-small uk-radius-large@m">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-large-top">
+                                            <div class="uni-item uk-card uk-overflow-hidden uk-radius uk-radius-large@m uk-box-shadow-hover-medium uk-visible-toggle uk-transition-toggle uk-box-shadow-medium uk-background-white dark:uk-background-white-5">
+                                                <div class="uni-item-featured-image uk-panel uk-flex-middle uk-flex-center">
+                                                    <div class="uk-panel uk-image-middle">
+                                                        <img src="assets/images/logo.PNG" alt="Artwork" class="uk-radius-small uk-radius-large@m">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+                    </div>
+                </div>
+            </div>
+<br><br> <br>
+          
+        <img class="uk-width-small uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src="assets/images/dd-removebg.png" alt="Divider" data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 100;">
+        <!-- about start -->
+        <div id="uni_about" class="uni-about uk-section uk-section-xlarge@m uk-panel">
+            <div class="uk-container">
+                <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid" data-uk-grid data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                    <div class="uk-panel uk-text-center">
+                        <h2 class="uk-h3 uk-h1@m"> WELCOME TO FSD. </h2>
+                    </div>
+                </header>
+                <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                    <div class="uk-grid uk-grid-2xlarge uk-grid-3xlarge@m uk-child-width-1-1" data-uk-grid="">
+                        <div>
+                            <div class="uk-panel">
+                                <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m" data-uk-grid="">
+                                    <div>
+                                        <div class="uk-panel uk-image-middle uk-overflow-hidden uk-radius uk-radius-large@m" data-anime="opacity:[0, 1]; translateX:[-24, 0]; onview: -250; delay: 200;">
+                                            <img src="assets/images/logo.PNG" alt="Create your own NFT">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel" data-anime="opacity:[0, 1]; translateX:[24, 0]; onview: -250; delay: 300;">
+                                            <span class="uk-text-overline uk-text-gradient">About FullSendGoge</span>
+                                            <h3 class="uk-h3 uk-h1@m">FSD MISSION.</h3>
+                                            <p class="uk-text-large@m">FullSendDoge ($FSD) is not just a token; it's a movement. Born from the spirit of fearlessness and boundless ambition, FullSendDoge is more than a cryptocurrency – it's a community-driven force propelling you towards financial sovereignty. With a deflationary mechanism, secure blockchain, and a passionate community, FullSendDoge is rewriting the rules of the crypto game. Join us on this epic journey, where every transaction is a step closer to the moon!  #FullSendDoge #CryptoRevolution</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-panel">
+                                <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m" data-uk-grid="">
+                                    <div>
+                                        <div class="uk-panel uk-image-middle uk-overflow-hidden uk-radius uk-radius-large@m" data-anime="opacity:[0, 1]; translateX:[24, 0]; onview: -250; delay: 300;">
+                                            <img src="assets/images/logo.PNG" alt="Create your own NFT">
+                                        </div>
+                                    </div>
+                                    <div class="uk-flex-first@m">
+                                        <div class="uk-panel" data-anime="opacity:[0, 1]; translateX:[-24, 0]; onview: -250; delay: 400;">
+                                            <span class="uk-text-overline uk-text-gradient"></span>
+                                            <h3 class="uk-h3 uk-h1@m">WHY FSD. </h3>
+                                            <p class="uk-text-large@m">Why FullSendDoge ($FSD)? Because we believe in the power of sending it all the way! FullSendDoge is not just a digital asset; it's a commitment to fearlessly pursue financial goals. With a hyper-deflationary model, community-driven initiatives, and a vision to break barriers, FullSendDoge is your passport to a decentralized future. Don't just hold – FullSend it! Join us and be part of a movement that's rewriting the script for financial empowerment. 🌐💸 #FullSendDoge #DecentralizeTheFuture.
+                                                </p>
+                                            <div class="uk-grid uk-grid-large@m uk-grid-match uk-child-width-1-2@m uk-margin-medium-top uk-margin-large-top@m" data-uk-grid="">
+                                                <div>
+                                                  
+                                                            <div class="uk-width-expand">
+                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about end -->
+
+        <img class="uk-width-small uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src="assets/images/dd-removebg.png" alt="Divider" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+
+        <!-- tokenomics start -->
+        <div id="uni_tokenomics" class="uni-tokenomics uk-section uk-section-xlarge@m uk-panel">
+            <div class="uk-container">
+                <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid" data-uk-grid data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                    <div class="uk-panel uk-text-center">
+                        <h2 class="uk-h3 uk-h1@m">Tokenomics</h2>
+                    </div>
+                </header>
+                <div id="uni_numbers" class="uni-numbers uk-section uk-section-large@m">
+                    <div class="uk-container">
+                        <div class="uk-panel">
+                            
+                            <div class="uk-grid uk-grid-large uk-grid-2xlarge@m uk-child-width-expand@m uk-text-center uk-text-muted" data-uk-grid="" data-anime="targets: > *; opacity:[0, 1]; scale:[0.5, 1]; onview: -250; delay: anime.stagger(100);">
+                                <div>
+                                    <div class="uk-panel">
+                                        <h4 class="uk-h3 uk-heading-d3@m uk-text-gradient uk-margin-xsmall uk-margin@m"> 10 Million</h4>
+                                        <span>Total Supply</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-panel">
+                                        <h4 class="uk-h3 uk-heading-d3@m uk-text-gradient uk-margin-xsmall uk-margin@m">0/0</h4>
+                                        <span>Buy/Sell Tax</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-panel">
+                                        <h4 class="uk-h3 uk-heading-d3@m uk-text-gradient uk-margin-xsmall uk-margin@m">Burnt
+
+                                            </h4>
+                                        <span> Liquidity</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-panel ">
+                    <div class="uk-grid uk-grid-2xlarge uk-grid-3xlarge@m uk-child-width-1-1" data-uk-grid="">
+                        <div class="uk-panel">
+                            <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m" data-uk-grid="">
+                                <div>
+                                    <div class="uk-panel uk-image-middle uk-overflow-hidden uk-radius uk-radius-large@m" data-anime="opacity:[0, 1]; translateX:[24, 0]; onview: -250; delay: 300;">
+                                        <img src="assets/images/logo.PNG" alt="Tokenomics">
+                                    </div>
+                                </div>
+                                <div class="uk-flex-first@m">
+                                    <div class="uk-panel" data-anime="opacity:[0, 1]; translateX:[-24, 0]; onview: -250; delay: 400;">
+
+                                        <div class="uk-grid uk-grid-large@m uk-grid-match uk-child-width-1-2@m uk-margin-medium-top uk-margin-large-top@m" data-uk-grid="">
+                                            <div>
+                                                <div class="uk-panel">
+                                                    <div class="uk-grid uk-grid-xsmall uk-grid-small@m" data-uk-grid="">
+                                                        <div>
+                                                            <div class="uk-card uk-card-xsmall uk-radius-medium uk-radius-large@m uk-background-gradient uk-flex-middle uk-flex-center">
+                                                                <i class="uk-icon-small uk-icon-medium@m unicon-rocket uk-text-white"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <span class="uk-text-small@m"> LP Burnt </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="uk-panel">
+                                                    <div class="uk-grid uk-grid-xsmall uk-grid-small@m" data-uk-grid="">
+                                                        <div>
+                                                            <div class="uk-card uk-card-xsmall uk-radius-medium uk-radius-large@m uk-background-gradient uk-flex-middle uk-flex-center">
+                                                                <i class="uk-icon-medium uk-icon-medium@m unicon-rocket uk-text-white"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <span class="uk-text-small@m">Sell Tax: 0% <br>
+                                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="uk-panel">
+                                                    <div class="uk-grid uk-grid-xsmall uk-grid-small@m" data-uk-grid="">
+                                                        <div>
+                                                            <div class="uk-card uk-card-xsmall uk-radius-medium uk-radius-large@m uk-background-gradient uk-flex-middle uk-flex-center">
+                                                                <i class="uk-icon-medium uk-icon-medium@m unicon-rocket uk-text-white"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <span class="uk-text-small@m">Buy Tax: 0% <br>
+                                                                      </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- tokenomics end -->
+
+    <!-- collection end -->
+    <img class="uk-width-small uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src="assets/images/dd-removebg.png" alt="Divider" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+    <!-- roadmap start -->
+    <div id="uni_roadmap" class="uni-roadmap uk-section uk-section-large@m uk-padding-3xlarge-bottom@m uk-panel uk-overflow-hidden swiper-parent">
+        <div class="uk-container">
+            <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-text-center uk-child-width-auto@m uk-grid" data-uk-grid data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                <div class="uk-panel">
+                    <h2 class="uk-h3 uk-h1@m">Roadmap</h2>
+                </div>
+            </header>
+            <div class="uk-panel uk-width-medium uk-margin-auto uk-margin-medium-top uk-margin-2xlarge-top@m" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 200;">
+                <div class="swiper swiper-match uk-overflow-unset" data-swiper="gap: 16; dots-type: progressbar;" data-swiper-m="gap: 32;">
+                    <div class="swiper-wrapper uk-grid-match uk-flex-middle" data-anime="targets: > * > *; opacity:[0, 1]; scale:[0.5, 1]; onview: -400; delay: anime.stagger(200);">
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="uni-phase uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                    
+                                    <div class="uk-panel">
+                                        <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 01</span>
+                                        
+                                        
+                                       
+                                        <ul class="uk-list uk-text-small uk-text-medium@m">
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-checkmark-outline uk-margin-xsmall-right uk-text-gradient"></i> Come up with ideas for FSD </li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-checkmark-outline uk-margin-xsmall-right uk-text-gradient"></i> Build Website for FSD.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-checkmark-outline uk-margin-xsmall-right uk-text-gradient"></i>Build Telegram and X communities.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-checkmark-outline uk-margin-xsmall-right uk-text-gradient"></i>smart contract audit.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="uni-phase uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                    
+                                    <div class="uk-panel">
+                                        <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 02</span>
+                                       
+                                        
+                                        <ul class="uk-list uk-text-small uk-text-medium@m">
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-checkmark-outline uk-margin-xsmall-right uk-text-gradient"></i> Pre-sale on Pinksale.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-checkmark-outline uk-margin-xsmall-right uk-text-gradient"></i> marketing campaigns.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i> Cooperate with reputable partners.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i> Telegram group reaches 1000 members.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="uni-phase uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                    
+                                    <div class="uk-panel">
+                                        <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 03</span>
+                                        
+                                       
+                                        <ul class="uk-list uk-text-small uk-text-medium@m">
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i>  FSD exceeds 1000 holders.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i> $1M Market Cap.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i>Listings on CMC and CG.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i> Launch of NFT collections.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="uni-phase uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                    
+                                    <div class="uk-panel">
+                                        <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 04</span>
+                                       
+                                       
+                                        <ul class="uk-list uk-text-small uk-text-medium@m">
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i>listing on Cex.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i>Introducing Staking for  FSD.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i> Reach 300,000 people across the BSC ecosystem.</li>
+                                            <li class="uk-flex-middle"><i class="uk-icon uk-icon-xsmall uk-icon-small@m unicon-close-outline uk-margin-xsmall-right uk-text-gradient"></i> $5M Market Cap.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal swiper-dotnav"></div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <a aria-label="Next" href="#next" class="swiper-next uk-button uk-button-small uk-button-icon uk-border uk-radius-circle uk-position-center-right uk-position-z-index uk-box-shadow-small dark:uk-background-gray-100"><i class="uk-icon-small" data-feather="chevron-right"></i></a>
+                    <a aria-label="Prev" href="#prev" class="swiper-prev uk-button uk-button-small uk-button-icon uk-border uk-radius-circle uk-position-center-left uk-position-z-index uk-box-shadow-small dark:uk-background-gray-100"><i class="uk-icon-small" data-feather="chevron-left"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- roadmap end -->
+        <img class="uk-width-small uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src=" assets/images/dd-removebg.png" alt="Divider" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 400;">
+      
+            <div class="uni-brands uk-section uk-section-xlarge@m uk-panel uk-overflow-hidden" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 300;">
+                <div class="uk-container">
+                    <div class="uk-panel uk-text-center dark:uk-text-white">
+                        <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-text-center uk-child-width-auto@m uk-grid" data-uk-grid data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                        <div class="uk-panel">
+                            <h2 class="uk-h3 uk-h1@m">Partners</h2>
+                        </div>
+                    </header>
+                        <div class="uk-grid uk-child-width-1-2 uk-child-width-expand@m uk-flex-middle uk-flex-center uk-grid uk-margin-medium-top" data-uk-grid>
+                            <div>
+    <div class="uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-card-border uk-box-shadow-xsmall uk-radius-medium uk-radius-large@m dark:uk-background-white-5">
+        <a href="https://www.pinksale.finance/">
+            <img class="uk-width-xsmall uk-text-gray-60 dark:uk-text-gray-20" src="assets/images/pinkswap.png" alt="" data-uk-svg>
+        </a>
+    </div>
+</div>
+
+                            <div>
+                                <div class="uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-card-border uk-box-shadow-xsmall uk-radius-medium uk-radius-large@m dark:uk-background-white-5">
+								<a href="https://www.dexview.com/">
+                                    <img class="uk-width-xsmall uk-text-gray-60 dark:uk-text-gray-20" src="assets/images/dexview.png" alt="Pancakeswap" data-uk-svg>
+								</a>	
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-card-border uk-box-shadow-xsmall uk-radius-medium uk-radius-large@m dark:uk-background-white-5">
+								<a href="https://pancakeswap.finance/">
+                                    <img class="uk-width-xsmall uk-text-gray-60 dark:uk-text-gray-20" src="assets/images/pa.png"  alt="" data-uk-svg>
+								</a>	
+									
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-panel uk-overflow-hidden uk-card uk-card-small uk-card-medium@m uk-card-border uk-box-shadow-xsmall uk-radius-medium uk-radius-large@m dark:uk-background-white-5">
+                                <a href="https://ave.ai/">								
+                                    <img class="uk-width-xsmall uk-text-gray-60 dark:uk-text-gray-20" src="assets/images/ave.png" alt="" data-uk-svg>
+								</a>	
+                             
+                               
+								</a>	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+        <img class="uk-width-small uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src="assets/images/dd-removebg.png" alt="Divider">
+        <!-- how to buy start -->
+        <div id="uni_buy" class="uni-buy uk-section uk-section-xlarge@m uk-panel">
+            <div class="uk-container uk-container-small">
+                <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid" data-uk-grid data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 200;">
+                    <div class="uk-panel uk-text-center">
+                        <h2 class="uk-h3 uk-h1@m">How to buy</h2>
+
+                        <a href="https://bscscan.com/token/0x2Ed579DBa88EaDBAd8088e62B0DfB0571030D350?a=0x92b7d56591ad74cb8176a72df317a417607610af" class="uk-button uk-button-small uk-button-large@m uk-button-gradient uk-margin-small-top uk-margin-large-top@m"> Contract Address</a>
+                    </div>
+                </header>
+                <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 300;">
+                    <img class="uk-position-top-left uk-text-secondary" width="16" src=" assets/images/objects/circle-01.png" alt="Object" style="top: -16%; left: 8%">
+                    <img class="uk-position-bottom-right uk-text-primary" width="24" src=" assets/images/objects/circle-02.png" alt="Object" style="bottom: 16%; right: -8%">
+                    <img class="uk-position-bottom-left uk-text-muted" width="28" src=" assets/images/objects/x.png" alt="Object" style="bottom: 16%; left: -8%">
+                    <div class="uk-grid uk-child-width-1-2@s uk-grid-match" data-uk-grid="" data-anime="targets: > *; opacity:[0, 1]; translateY:[24, 0]; onview: -250; delay: anime.stagger(100);">
+                        <div>
+                            <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src=" assets/images/icon-01.png" alt="Icon">
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Install wallet</h3>
+                                        <p>Install MetaMask & create a wallet</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src=" assets/images/icon-02.png" alt="Icon">
+                                        <div hidden class="uk-card uk-card-xsmall uk-radius-medium uk-background-gradient uk-flex-middle uk-flex-center uk-margin-medium-bottom@m">
+                                            <i class="uk-icon-medium uk-icon-medium@m unicon-select-window"></i>
+                                        </div>
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Connect Wallet</h3>
+                                        <p>Connect your wallet to pancakeswap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src=" assets/images/icon-03.png" alt="Icon">
+                                        <div hidden class="uk-card uk-card-xsmall uk-radius-medium uk-background-gradient uk-flex-middle uk-flex-center uk-margin-medium-bottom@m">
+                                            <i class="uk-icon-medium uk-icon-medium@m unicon-select-window"></i>
+                                        </div>
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Copy Contract</h3>
+                                        <p>Copy and paste the Contract address</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src=" assets/images/icon-04.png" alt="Icon">
+                                        <div hidden class="uk-card uk-card-xsmall uk-radius-medium uk-background-gradient uk-flex-middle uk-flex-center uk-margin-medium-bottom@m">
+                                            <i class="uk-icon-medium uk-icon-medium@m unicon-select-window"></i>
+                                        </div>
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Swap</h3>
+                                        <p>Select BNB to swap for $FSD and select “Swap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- how to buy end -->
+
+
+
+        <img class="uk-width-small uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m" src="assets/images/dd-removebg.png" alt="Divider" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+
+        <!-- cta start -->
+        <div class="uni-cta uk-section uk-section-2xlarge@m uk-panel uk-overflow-hidden">
+            <img class="uk-cover uk-opacity-10" data-uk-cover src="assets/images/logo.PNG" alt="arrow">
+            <div class="uk-container">
+                <div class="uk-card uk-flex-center uk-text-center">
+                    <div class="uk-panel uk-width-xlarge@m uk-position-z-index" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                        <img class="uk-position-top-left" width="24" src=" assets/images/objects/circle-01.png" alt="Object" style="top: 0%; left: -16%">
+                        <img class="uk-position-bottom-right" width="24" src=" assets/images/objects/x.png" alt="Object" style="bottom: 16%; right: -8%">
+                        <img class="uk-position-top-right" width="40" src=" assets/images/objects/ethereum-02.png" alt="Object" style="top: 0%; right: -16%">
+                        <img class="uk-position-bottom-left" width="48" src=" assets/images/objects/bitcoin-01.png" alt="Object" style="bottom: 16%; left: -8%">
+                        <h4 class="uk-h3 uk-heading-d1@m">Join the FSD community!</h4>
+                        <a href="tglink" class="uk-button uk-button-small uk-button-large@m uk-button-gradient uk-margin-small-top uk-margin-large-top@m">Join community</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- cta end -->
+
+
+        <!-- Footer start -->
+        <footer class="uni-footer uk-section uk-section-xlarge@m">
+            <div class="uk-container">
+                <div class="uk-panel">
+
+
+                    <div class="uk-panel uk-text-small">
+                        <div class="uk-grid uk-child-width-auto@m uk-flex-center uk-flex-between@m uk-text-center uk-text-left@m" data-uk-grid>
+                            <div>
+                                <ul class="uk-subnav uk-subnav-small uk-text-muted uk-flex-center">
+                                    <li>
+                                        <a href="twitterlink"><i class="fa-brands fa-x-twitter"></i></span></a>
+                                    </li>
+                                    <li class="uk-margin-small-left">
+                                        <a href="tglink" data-uk-totop="" data-uk-scroll><i class="fa-brands fa-telegram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="uk-flex-first@m uk-flex-center">
+                                <p class="uk-text-muted">© 2023 FSD. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer end -->
+
+        <!-- include scripts -->
+        <script defer src=" assets/js/jquery.min.js"></script>
+        <script defer src=" assets/js/swiper-bundle.min.js"></script>
+        <script defer src=" assets/js/feather.min.js"></script>
+        <script defer src=" assets/js/typed.min.js"></script>
+        <script defer src=" assets/js/anime.min.js"></script>
+        <script defer src=" assets/js/app.js"></script>
+        <script defer src=" assets/js/data-attr-helper.js"></script>
+        <script defer src=" assets/js/swiper-helper.js"></script>
+        <script defer src=" assets/js/typed-helper.js"></script>
+        <script defer src=" assets/js/anime-helper.js"></script>
+
+        <!-- <script defer src=" assets/js/anime-helper-defined-timelines.js"></script> -->
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                document.documentElement.classList.add("uk-dark");
+                localStorage.setItem("darkMode", "1");
+            } else if (getSchema === "light") {
+                document.documentElement.classList.remove("uk-dark");
+                localStorage.setItem("darkMode", "0");
+            }
+        </script>
+</body>
+
+</html>
