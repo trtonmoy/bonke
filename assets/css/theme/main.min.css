@@ -4623,7 +4623,7 @@ html.bp-xl .uk-width-11-12\@xl {
 .uk-dark h5,
 .uk-dark h6 {
     background: #9C9C9C;
-    background: linear-gradient(to right, #009cda 17%, #FFA700 97%);
+    background: linear-gradient(to right, #bb51fa 17%, #00fa80 97%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
